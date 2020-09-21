@@ -25,6 +25,7 @@
    * [How does one check if a given agent is currently scared? Is the only option to check the number of capsules in previous states?](#how-does-one-check-if-a-given-agent-is-currently-scared-is-the-only-option-to-check-the-number-of-capsules-in-previous-states)       
    * [It looks like the distance calculator is performing calculations in the background of our turns, can we replace it with our own version that does more?](#it-looks-like-the-distance-calculator-is-performing-calculations-in-the-background-of-our-turns-can-we-replace-it-with-our-own-version-that-does-more)
    * [How to call a planner (or another external tool)?](#how-to-call-a-planner-or-another-external-tool)
+   * [Binary file for Metric-FF](#binary-file-for-metric-ff)
    * [What does it mean that we must use 2/3 AI techniques? Do they all need to be part of the final submission?](#what-does-it-mean-that-we-must-use-23-ai-techniques-do-they-all-need-to-be-part-of-the-final-submission)
 
 Created by [gh-md-toc](https://github.com/ekalinin/github-markdown-toc)
@@ -361,10 +362,13 @@ step    0: GO P_1_9 P_1_10
 
 Of course, all the above can be adapted to run other planners or even other external tools.
 
+### Binary file for Metric-FF
+
+You can [download](https://github.com/AI4EDUC/pacman-contest-cluster/blob/master/planners/ff) a compiled binary file that works for Linux. Once you download it, remember to run `chmod +x ff` to make sure the binary has executable rights. You can run `./ff` and you should see the command line options.
+
+
 ### What does it mean that we must use 2/3 AI techniques? Do they all need to be part of the final submission?
 
 Your final submission should have >= 1 techniques, and your repo & experiments should have the code & analysis of all the techniques you tried. Which should be at least 2 or 3 depending on the size of the team.
 
 It's expected that some techniques that you try will not work well, so you can just report about them in your analysis. In terms of final submission, if you want to perform well, most likely you'll end up mixing a few techniques. 
-
-#pin
