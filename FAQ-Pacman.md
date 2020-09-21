@@ -279,7 +279,7 @@ First, whatever external call is used, it **cannot be done** in another concurre
 
 **NOTE:** Please do not use `popen`. This is a non-blocking command which might leave things running on the server after your turn has finished, which will lead to your disqualification!
 
-Suppose your code generates the specific `domain.pddl` and `problem.pddl` files that you want to use the planner on.  We are assuming these files, and the `ff` executable, are all in the same folder as `myTeam.py`.
+Suppose your code generates the specific `domain.pddl` and `problem.pddl` files that you want to use the planner on.  We are assuming these files are all in the same folder as `myTeam.py`, and the `ff` executable is available systemwide. We make sure that `ff` is available by running this command `sudo cp ff /usr/local/bin/.`, you can install it in your system as well with the same command This will let you run `ff` without the need to use the prefix `./`.
 
 Here is a template using `subprocess.run()`:
 
@@ -289,7 +289,8 @@ import subprocess
 
 def call_ff(domain, problem):
     cd = os.path.dirname(os.path.abspath(__file__))
-    cmd = [f"{cd}/ff", "-o", f"{cd}/{domain}", "-f", f"{cd}/{problem}"]
+    cmd = ["ff", "-o", f"{cd}/{domain}", "-f", f"{cd}/{problem}"] 
+    # If you run ff in your local folder, change the first string "ff"-> f"{cd}/ff"
 
     result = subprocess.run(cmd, stdout=subprocess.PIPE, stderr=subprocess.PIPE, universal_newlines=True)
 
