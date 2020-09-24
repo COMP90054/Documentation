@@ -220,14 +220,11 @@ This means that if you import from other files outside `myTeam.py` they will not
 
 ```
 import sys
-sys.path.append(&rsquo;teams/<your team>/&rsquo;)
-```
-
-Now, the best way is to automatically obtain the folder where your file myTeam.py is located when playing the game, and then use that folder. You can do that using:
-
-```
 cd = os.path.dirname(os.path.abspath(__file__))
+sys.path.append(cd)
 ```
+
+The code above obtains the folder where your file myTeam.py is located when playing the game, and then uses that folder to add it to the system path
 
 Now you can use variable cd itself, that is where your `myTeam.py` is located. Check [this post](https://stackoverflow.com/questions/9271464/what-does-the-file-variable-mean-do?utm_medium=organic&utm_source=google_rich_qa&utm_campaign=google_rich_qa) for more info and ideas.
 
