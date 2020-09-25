@@ -1,5 +1,3 @@
-# FAQ - Pacman Projects - AI Planning for Autonomy
-
 * [GENERAL](#general)
    * [In a code assignment/project, how do I make sure I do not go against academic integrity?](#in-a-code-assignmentproject-how-do-i-make-sure-i-do-not-go-against-academic-integrity)
    * [How do I submit my project solution in my GIT repository?](#how-do-i-submit-my-project-solution-in-my-git-repository)
@@ -32,13 +30,13 @@ Created by [gh-md-toc](https://github.com/ekalinin/github-markdown-toc)
 
 ----------------------
 
-## GENERAL
+# GENERAL
 
 ### In a code assignment/project, how do I make sure I do not go against academic integrity?
 
 Check the answer to this key question here. [TECHNICAL](https://docs.google.com/document/d/14giB_eIkWeBwMsBWY0-Tjd6itDV2BBOvwEqcSDyYRZ0/edit?usp=sharing)
 
-### How do I submit my project solution in my GIT repository?
+## How do I submit my project solution in my GIT repository?
 
 You submit by **tagging** the exact commit that you want to submit with the name given in the assignment specification. Note tagging is NOT the same as a branch, a tag is a specific point in the repository history, the point you want to be used for marking. A branch is a whole history, so it does not specify a commit version to use for marking.
 
@@ -50,7 +48,7 @@ Note that the timestamp of the commit is the submission date.
 
 See next questions to change the submission tag you have already done (i.e., you want to update your submission to another point in the repo history, usually a more recent one).
 
-### How do I change the submission tag if I have already tagged one commit for submission?
+## How do I change the submission tag if I have already tagged one commit for submission?
 
 This will happen when you realize you have a better version to submit than the one you submitted/tagged before. To do that, you need to delete the tag (from your local repo and from the server:
 
@@ -59,7 +57,7 @@ This will happen when you realize you have a better version to submit than the o
 
 More information on how to delete git tags [here](https://devconnected.com/how-to-delete-local-and-remote-tags-on-git/).
 
-### How do I zip files in folder X without including the folder X itself?
+## How do I zip files in folder X without including the folder X itself?
 
 Use the `-j` option, for example:
 
@@ -72,28 +70,28 @@ However, this is OK if you don&rsquo;t need ANY folder at all in the zip, everyt
 ```
 rm -f myAgent.zip ; cd project-2/MySolution; zip -r -j ../../myAgent.zip * ; cd ..
 ```
-### I submitted wrongly (e.g., didn't tag correctly) and is now after the due date, can you consider my submission?
+## I submitted wrongly (e.g., didn't tag correctly) and is now after the due date, can you consider my submission?
 
 We will not fix any submission and it is your responsability to do it correctly.
 
 However, the nice thing about git-based projects/assessments is that we can rely on commits. If you have submitted your tag incorrectly (did not tag it at all, tagged with different name or different capital letters), then please fix your submission by tagging the specific commit you want me to mark. I will use the timestamp of the commit itself, not of when it was tagged. This means that if the commit was done before the deadline, then all good!! Isn't this cool?
 
 
-### Project specification says "You should code your implementation only at the locations ...." . Does this mean that we can't create our custom classes outside the provided functions?
+## Project specification says "You should code your implementation only at the locations ...." . Does this mean that we can't create our custom classes outside the provided functions?
 
 Yes, you can create some help functions or classes, but **always** in the allowed files. Any other change in any other file will be totally ignored.
 
 If you want to create custom classes and functions, you can also nest them inside the location where you read `***YOUR CODE HERE***`. See [this link](https://www.datacamp.com/community/tutorials/inner-classes-python) and [this link](https://www.programiz.com/python-programming/closure#:~:text=A%20function%20defined%20inside%20another,in%20order%20to%20modify%20them) for more info.
 
-## PACMAN SETUP
+# PACMAN SETUP
 
-### What is the best way to develop my solutions for the Pacman project?
+## What is the best way to develop my solutions for the Pacman project?
 
 We highly recommend developing your solutions in your local machine (e.g., your laptop). Even more, if you are running Linux locally, 99.99% sure your code will ran in another Linux install. If you are using Windows, you may want to consider installing a Linux virtual machine with Virtualbox.
 
 Running it locally will make the development much faster. I also suggest using a version control system, like git or mercurial. This is best practice and should be something normal at this stage of the program. Remember though NOT to make your solutions public and this will violate the course plagiarism code AND also break the will of the creators of this wonderful project. SO if you use bitbucket for example, make sure your repository is private.
 
-### What version of Python should I use?
+## What version of Python should I use?
 
 **All projects run on Python 3.6, so your code must be written for such version**. Please note the original project from UC runs in Python 2.7. 
 
@@ -150,19 +148,19 @@ Python 3.6.0 :: Anaconda 4.3.0 (64-bit)
 
 As you can see, I have python 2.7 and 3.6 coexisting peacefully in my OS."
 
-### How do I setup a system in Windows with Python 3.6?
+## How do I setup a system in Windows with Python 3.6?
 
 Although we will assume you are able to install and get Python running in your machine, there are plenty of videos on that on the web. For example: 
 
 [![Alt text](https://img.youtube.com/vi/oHOiqFs_x8Y/0.jpg)](https://www.youtube.com/watch?v=oHOiqFs_x8Y)
 
-## TROUBLESHOOTING
+# TROUBLESHOOTING
 
-### Can I use problem._visited?
+## Can I use problem._visited?
 
 Under Python convention, single underscore before a name (e.g., `_visited`) denotes private data, and hence it is good practice not to rely on such data. Check [this post](https://shahriar.svbtle.com/underscores-in-python) for example. Note that such private data can change without notice, it may not be available anymore, it may not be available under other interfaces, etc. So.... 
 
-### I get "I get "_tkinter.TclError: no display name and no $DISPLAY environment variable" error when running in WSL or ssh
+## I get "I get "_tkinter.TclError: no display name and no $DISPLAY environment variable" error when running in WSL or ssh
 
 If you do not care about the graphics (e.g., for grading), then try using --textGraphics or even --quietTextGraphics. 
 
@@ -176,7 +174,7 @@ Check this video for example: https://youtu.be/vwZXhTykSis
 
 Said so, for development, **we strongly suggest** to clone your repo locally on your machine and work there (e.g., using PyCharm, Visual Code Studio).
 
-### Cannot run Pacman due to problems with Tkinter: "ImportError: No module named Tkinter"
+## Cannot run Pacman due to problems with Tkinter: "ImportError: No module named Tkinter"
 
 Install Tkinter:
 
@@ -198,17 +196,17 @@ Type "help", "copyright", "credits" or "license" for more information.
 [e62439@foo~]$ 
 ```
 
-### How do I know the type of a variable in Python?
+## How do I know the type of a variable in Python?
 
 Check [this video](https://www.youtube.com/watch?v=iROZLaQGy4s&feature=youtu.be&t=1490) to know how to print the type of a variable in Python.
 
-### Error module 'cgi' has no attribute 'escape' when running autograder.pt
+## Error module 'cgi' has no attribute 'escape' when running autograder.pt
 
 You are probably not using Python 3.6 but a higher version.
 
-## CAPTURE THE FLAG
+# CAPTURE THE FLAG
 
-### How to load my additional files beyond myTeam.py?
+## How to load my additional files beyond myTeam.py?
 
 Your code will be copied into a directory called teams/<your_teamname>/ in the contest package. Remember, your code will be run by the following command:
 
@@ -230,15 +228,15 @@ Now you can use variable cd itself, that is where your `myTeam.py` is located. C
 
 
 
-### Do you provide library X (e.g., tensorflow)?
+## Do you provide library X (e.g., tensorflow)?
 
 If it is a "standard" or very "common" library, most probably yes. Just send me an email and we will work out to make sure it is available in the cluster.
 
-### Games go too fast! What should I do?
+## Games go too fast! What should I do?
 
 Use the `--delay-step` option. Note that option is NOT available in the standard UC-Berkeley distribution; I have added it.
 
-### How do I replay a game?
+## How do I replay a game?
 
 You can play a game and use the `--record` option, you will be left with the game history to a file named by the time the game was played. You can replay these files using the `--replay` option and specifying the file to replay. You can use the `--replay-delay` to change the speed of the replay (see this is a feature in our distribution, not in the UC-Berkeley distribution). For example:
 
@@ -248,15 +246,16 @@ python capture.py --replay BBC_vs_It_depends_contest18Capture.replay --delay-ste
 
 All matches played in the preliminary contests are automatically recorded and the most recent ones can be viewed on the contest site. You are also able to download the history associated with each replay.
 
+A new script [replay.py] is provided by Sebastian that can be used to select which replay to run from a collection of replays (obtained from the contest site). This is an extended version of the one developed by a student in 2020, Thomas and hosted [here](https://github.com/itsjfx/pacman-contest-replay-player). This makes running replays much easier!
 
-### How does one check if a given agent is currently scared? Is the only option to check the number of capsules in previous states?
+## How does one check if a given agent is currently scared? Is the only option to check the number of capsules in previous states?
 
 ```
 GetAgentState(self.index).scaredTimer
 ```
 
 
-###  It looks like the distance calculator is performing calculations in the background of our turns, can we replace it with our own version that does more?
+##  It looks like the distance calculator is performing calculations in the background of our turns, can we replace it with our own version that does more?
 
 The short answer is **no**, you cannot replace or change that code, but you can create your own version that you use instead. For the long answer, keep reading.
 
@@ -268,7 +267,7 @@ This shouldn't be an issue, as it will only take less than 1 second of your 15 s
 
 
 
-### How to call a planner (or another external tool)?
+## How to call a planner (or another external tool)?
 
 Suppose you have [`ff` planner](https://fai.cs.uni-saarland.de/hoffmann/ff.html) up and running in your machine. How do I call it from my Python code and extract the plan from its solution?
 
@@ -360,13 +359,42 @@ step    0: GO P_1_9 P_1_10
 
 Of course, all the above can be adapted to run other planners or even other external tools.
 
-### Binary file for Metric-FF
+## Binary file for Metric-FF
 
 You can [download](https://github.com/AI4EDUC/pacman-contest-cluster/blob/master/planners/ff) a compiled binary file that works for Linux. Once you download it, remember to run `chmod +x ff` to make sure the binary has executable rights. You can run `./ff` and you should see the command line options.
 
 
-### What does it mean that we must use 2/3 AI techniques? Do they all need to be part of the final submission?
+## What does it mean that we must use 2/3 AI techniques? Do they all need to be part of the final submission?
 
 Your final submission should have >= 1 techniques, and your repo & experiments should have the code & analysis of all the techniques you tried. Which should be at least 2 or 3 depending on the size of the team.
 
 It's expected that some techniques that you try will not work well, so you can just report about them in your analysis. In terms of final submission, if you want to perform well, most likely you'll end up mixing a few techniques. 
+
+## I have performance problem with `generateSuccessor` in my search implementation, why?
+
+A student post a very interesting question:
+
+> I have a little performance issue regarding our A-star heuristic search agent performing on OfficeCapture. The behaviour is it stops 3-4 seconds to complete A-star search.
+
+> As investigated, most of the time was executed on the generateSuccessor method, which belongs to `capture.py` which is out of our control.
+
+> ![](img/getSuccessor-performance.png)
+
+First that is a great work on using profiling to look into this issue!
+
+If you look at what `generateSuccessor` is doing, you will see there is a fair amount of work going on. If you compare this to the search code used to generate maze distances in `distanceCalculator.py` (`computeDistances()`, line 110), you will see they aren't generating successors at all, but are still doing a search though the maze. You might want to consider whether that is an appropriate method to follow for your case. 
+
+One thing that one would like to see is how many calls are being made to `generateSuccessor` in each search. If you are seeing about 100 then that is plausible given the map size. If you are seeing thousands then it's likely you are double checking some cells and might need to tweak your algorithm.
+
+This shows that the transition function is not free :) and that there is a tradeoff between a good (informed) heuristic that reduces the number of generated nodes and the actual cost of that heuristic!
+
+
+## I want to update an enemy position that's not in my sight range. I need to assign the position information in a copy of `gameState`. But I could only get an Agent Position not set.
+
+You can do anything you want with the `gameState` you receive - it's only a copy of the real one. 
+
+
+
+## The Berkeley site claims that observations are noisy unless the other agent is nearby, but when I call `getAgentPosition` it gives the exact location of any agent, including opponents. 
+
+This is true only during `registerInitialState`, but then returns `None` as expected during `chooseAction`, thus aligned with what the Berkeley site says.
