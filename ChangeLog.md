@@ -46,13 +46,19 @@ This will not affect any behaviour, as we only change the comment/documentation:
 ```python
 def getAction(self, gameState):
 """
-Calls chooseAction on a grid position, but continues on half positions. If you subclass CaptureAgent, you shouldn't need to override this method.  It takes care of appending the current gameState on to your observation history (so you have a record of the game states of the game) and will call your choose action method if you're in a state (rather than halfway through your last move - this occurs because Pacman agents move half as quickly as ghost agents).
+Calls chooseAction on a grid position, but continues on half positions. 
+If you subclass CaptureAgent, you shouldn't need to override this method.
+It takes care of appending the current gameState on to your observation history 
+(so you have a record of the game states of the game) and will call your choose 
+action method if you're in a state (rather than halfway through your last 
+move - this occurs because Pacman agents move half as quickly as ghost agents).
 """
 ```
 This comment has been removed:
 
 ```
-(rather than halfway through your last move - this occurs because Pacman agents move half as quickly as ghost agents).
+(rather than halfway through your last move - this occurs because Pacman agents 
+move half as quickly as ghost agents).
 ```
 
 Given that all agents move at the same speed.
