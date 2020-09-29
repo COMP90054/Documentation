@@ -65,7 +65,7 @@ Given that all agents move at the same speed.
 
 # CaptureGraphics.py
 
-Changes are only affecting the UI, where the status bar with the names now displays better names that are too long
+Changes are only affecting the UI, where the status bar supports team names that are too long.
 
 # Replay.py
 
